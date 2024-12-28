@@ -3,11 +3,11 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "python-boilerplate"
+name = "pydantic-agents"
 version = "0.1.0"
-description = "A minimal Python project boilerplate"
+description = "Demo agents using PydanticAI"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 license = "MIT"
 authors = [
     { name = "Your Name", email = "your.email@example.com" }
@@ -15,6 +15,8 @@ authors = [
 dependencies = [
     "python-dotenv>=1.0.0",
     "rich>=13.0.0",
+    "asyncpg>=0.29.0",
+    "pydantic-ai[examples,logfire]>=0.0.15",
 ]
 
 [project.optional-dependencies]
@@ -56,6 +58,7 @@ warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true
 check_untyped_defs = true
+disable_error_code = ["var-annotated"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

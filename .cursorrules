@@ -3,19 +3,28 @@
 ## Development Workflow
 
 - Always create a new branch for each task in composer `composer/[feature-name]`
-- Run format, lint, and tests to make sure everything is working
+- ALWAYS run format, lint, and tests before ANY commit
+- ALWAYS run format, lint, and tests before ANY push
 - Commit changes only after all checks pass
 - Use conventional commit messages
 
 ## Stack & Dependencies
 
 - Python 3.8+
+- UV for package management
 - Black for code formatting
 - Ruff for linting
 - isort for import sorting
 - mypy for type checking
 - pytest for testing
 - rich for console output
+
+## Package Management
+
+- Use UV for all package operations
+- Install dependencies: `uv pip install -e ".[dev]"`
+- Add new dependencies to pyproject.toml
+- Update dependencies: `uv pip install -e ".[dev]"`
 
 ## Code Style
 
@@ -39,4 +48,7 @@
 3. Run `make format`
 4. Run `make lint`
 5. Run `make test`
-6. Commit changes if all checks pass
+6. If all checks pass:
+   - Commit changes
+   - Run `make lint` and `make test` again
+   - Push changes if all checks pass
