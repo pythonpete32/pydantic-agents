@@ -10,12 +10,20 @@
 ## Stack & Dependencies
 
 - Python 3.8+
+- UV for package management
 - Black for code formatting
 - Ruff for linting
 - isort for import sorting
 - mypy for type checking
 - pytest for testing
 - rich for console output
+
+## Package Management
+
+- Use UV for all package operations
+- Install dependencies: `uv pip install -e ".[dev]"`
+- Add new dependencies to pyproject.toml
+- Update dependencies: `uv pip install -e ".[dev]"`
 
 ## Code Style
 
