@@ -1,0 +1,42 @@
+# Cursor Rules
+
+## Development Workflow
+
+- Always create a new branch for each task in composer `composer/[feature-name]`
+- Run format, lint, and tests to make sure everything is working
+- Commit changes only after all checks pass
+- Use conventional commit messages
+
+## Stack & Dependencies
+
+- Python 3.8+
+- Black for code formatting
+- Ruff for linting
+- isort for import sorting
+- mypy for type checking
+- pytest for testing
+- rich for console output
+
+## Code Style
+
+- Follow Black code formatting (88 char line length)
+- Use type hints for all functions
+- Follow PEP 8 naming conventions
+- Use Google-style docstrings
+- Keep docstrings concise but descriptive
+
+## Testing
+
+- Write tests for all new features
+- Test files mirror source file structure
+- Use descriptive test names
+- Run tests after every change
+
+## Task Completion Checklist
+
+1. Create new branch for task
+2. Make required changes
+3. Run `make format`
+4. Run `make lint`
+5. Run `make test`
+6. Commit changes if all checks pass
