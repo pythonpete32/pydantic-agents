@@ -3,7 +3,8 @@
 ## Development Workflow
 
 - Always create a new branch for each task in composer `composer/[feature-name]`
-- Run format, lint, and tests to make sure everything is working
+- ALWAYS run format, lint, and tests before ANY commit
+- ALWAYS run format, lint, and tests before ANY push
 - Commit changes only after all checks pass
 - Use conventional commit messages
 
@@ -47,4 +48,7 @@
 3. Run `make format`
 4. Run `make lint`
 5. Run `make test`
-6. Commit changes if all checks pass
+6. If all checks pass:
+   - Commit changes
+   - Run `make lint` and `make test` again
+   - Push changes if all checks pass
